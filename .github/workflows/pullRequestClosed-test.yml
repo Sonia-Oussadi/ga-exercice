@@ -1,0 +1,6 @@
+name: PR test workflow
+
+on:
+  pull_request:
+    types:
+      - "closed"
