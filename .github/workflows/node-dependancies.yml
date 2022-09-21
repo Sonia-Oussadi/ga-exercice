@@ -12,10 +12,10 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-      - name: install dependancies
-        - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
           with:
             node-version: ${{ matrix.version }}
+      - name: install dependancies
         working-directory: node-app
         run: npm i
       - name: run test
