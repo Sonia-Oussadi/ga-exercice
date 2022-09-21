@@ -5,12 +5,18 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        version: [12, 14, 16]
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
       - name: install dependancies
         working-directory: node-app
+        - uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.version }}
         run: npm i
       - name: run test
         working-directory: node-app
