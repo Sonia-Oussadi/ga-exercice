@@ -1,0 +1,6 @@
+name: test push on branch start with feat workflow
+
+on:
+  push:
+    branches:
+      - "feat/**"

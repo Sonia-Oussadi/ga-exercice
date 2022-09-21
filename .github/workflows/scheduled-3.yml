@@ -1,0 +1,4 @@
+name: trigger a workflow every Tuesday at 3am
+on:
+  schedule:
+    - cron: "0 3 * * 1"
