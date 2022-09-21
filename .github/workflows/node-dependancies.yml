@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install dependancies
-        working-directory: ./node-module
+        working-directory: node-module
         run: npm i
       - name: run test
-        working-directory: ./node-module
+        working-directory: node-module
         run: npm run test
