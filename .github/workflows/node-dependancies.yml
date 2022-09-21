@@ -5,10 +5,11 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         version: [12, 14, 16]
-    runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
       - name: install dependancies
